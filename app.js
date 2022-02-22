@@ -25,6 +25,10 @@ app.get('/gsignin', (req, res) => {
   res.status(200).json({ access_token: token });
 })
 
+app.delete('/products', (req, res) => {
+  res.send('Product has been deleted!')
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
