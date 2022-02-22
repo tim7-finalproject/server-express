@@ -25,6 +25,16 @@ app.get('/gsignin', (req, res) => {
   res.status(200).json({ access_token: token });
 })
 
+app.put('/products', (req, res) => {
+  let data = {
+    name: 'product name',
+    desc: 'product dessc',
+    price: 600000,
+    categoryId: 2
+  }
+  res.status(200).json({ data });
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
