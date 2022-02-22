@@ -35,6 +35,10 @@ app.put('/products', (req, res) => {
   res.status(200).json({ data });
 })
 
+app.delete('/products', (req, res) => {
+  res.send('Product has been deleted!')
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
